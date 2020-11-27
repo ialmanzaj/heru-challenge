@@ -1,11 +1,13 @@
 # heru-challenge
 
-#The Herucode Language
+# The Herucode Language
+
 Archeologists found a scroll containing texts in the ancient and mysterious Herucode
 language, remnants of a now-forgotten civilization: the Heruits.
 After many years of study, linguists have learned some of the fundamental characteristics of
 this language:
-Lexicographical Order
+
+# Lexicographical Order
 In Herucode, like in our system, words are always ordered lexicographically, but the
 challenge is that the order of the letters in the Herucode alphabet is different from ours. Their
 alphabet, in order, is: sxocqnmwpfyheljrdgui.
@@ -34,16 +36,18 @@ Heruits consider a number to be pretty if it satisfies all of the following prop
 - it is greater than or equal to 81827
 - it is divisible by 3
 
-#The Challenge
+# The Challenge
 Write an API server with a single endpoint: POST /parse .
 This endpoint should receive as body the string parameter text containing a string of
-Herucode. The endpoint should the return a JSON response with the following content:
+Herucode. 
+
+The endpoint should the return a JSON response with the following content:
 ● prepositions: Integer with the number of prepositions in the text.
 ● verbs: Integer with the number of verbs in the text.
 ● subjunctive_verbs: Integer with the number of subjunctive verbs.
 ● pretty_numbers: Integer with the number of distinct pretty numbers.
-● vocabulary_list: List of strings containing all the distinct words in the text
-ordered by Herucode’s alphabetical order.
+● vocabulary_list: List of strings containing all the distinct words in the textordered by Herucode’s alphabetical order.
+
 Remember to include detailed instructions on how to run your service. Feel free to add any
 other features you may find interesting/useful. Use the test cases included to validate your
 algorithm.
@@ -59,7 +63,8 @@ cwj hysucxdqm ms hdmwpe igxweo sqflo ycqlinro ghu hgecdfj mw xrpmyenq fgixsr
 fpwcnguieh fclgj ghepqyd jxhwe cejfugn ujxqh ihncrl mlceo udr fm ocxfsjdng sfoqmd
 pdoymnwxei spqinedf ql ncsepfl icmqsdj chwjlg yiq ifl syejrqd lwnepmcg xlmnfqry
 ghlyopuncw qx iw sionpux cop dmqpchuyf ojxfqhernm ignpeyf rseoyl emjocsild rfimdy mwd
-oewgjfr uo irmcunfgx ylduwpsnh xrdng gcxr ng prfmjicud srdueqhgiy nmodwsqijh dcnql
+oewgjfr uo irmcunfgx ylduwpsnh xrdng gcxr ng prfmjicud srdueqhgiy nmodwsqijh dcnql`
+
 Expected Output
 
 1) There are 3 prepositions in the text
@@ -105,4 +110,5 @@ eqxghfry eqclrnguo efwh ehyldsnmf euhxmosc eujh lqeshijndg lf lhimoynsr lruneodc
 liyrexhmu jqwpdo jnufdshiqe jwroheqm jwispgefdo rxoew rcyihwxq rnc rwjxecpmfl rfs rylnsph
 dniefl djpsogiy drg dufqwh gquscxhw gm gywlc gimqxwuyr uxfrpsnqd ucrfdsoeq uqpwmni
 umynehjsci umyldn uwflpqc url ugnmqfypsd ifwpnx iecusqjp ijucmxw
-5) There are 21 distinct pretty numbers in the text`
+`
+5) There are 21 distinct pretty numbers in the text
