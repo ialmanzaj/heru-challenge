@@ -31,7 +31,8 @@ worth 400, and so on and so forth. The values of the letters are given by the or
 appear in the Herucode alphabet (which, as we saw, is ordered differently from our
 alphabet). That is, the first letter of the Herucode alphabet represents the digit 0, the second
 letter represents the digit 1, and the last one represents the digit 19.
-As an example, the Herucode word gxjrc represents the number 605637.
+
+As an example, the Herucode word **gxjrc** represents the number **605637.**
 Heruits consider a number to be pretty if it satisfies all of the following properties:
 - it is greater than or equal to 81827
 - it is divisible by 3
@@ -47,7 +48,7 @@ The endpoint should the return a JSON response with the following content:
 - verbs: Integer with the number of verbs in the text.
 - subjunctive_verbs: Integer with the number of subjunctive verbs.
 - pretty_numbers: Integer with the number of distinct pretty numbers.
-- vocabulary_list: List of strings containing all the distinct words in the textordered by Herucode’s alphabetical order.
+- vocabulary_list: List of strings containing all the **distinct** words in the text **ordered by Herucode’s alphabetical order.**
 
 Remember to include detailed instructions on how to run your service. Feel free to add any
 other features you may find interesting/useful. Use the test cases included to validate your
@@ -69,20 +70,15 @@ oewgjfr uo irmcunfgx ylduwpsnh xrdng gcxr ng prfmjicud srdueqhgiy nmodwsqijh dcn
 
 Expected Output
 
-1) There are 3 prepositions in the text
-2) There are 36 verbs in the text
-3) There are 25 subjunctive verbs in the text
-4) Vocabulary list:
+- There are 3 prepositions in the text
+- There are 36 verbs in the text
+- There are 25 subjunctive verbs in the text
+- Vocabulary list:
 
-`sqflo spqinedf sfoqmd syejrqd shoce srdueqhgiy sionpux xclpedqmi xlmnfqry xrpmyenq
-xrdng ocxfsjdng oewgjfr ojxfqhernm cop coj cmfur cwj cpqmxj chwjlg cejfugn qx qplfjnwidg
-qhmoixw ql qdrulxogji qinhmjul qinexwo qihmu ncsepfl nmodwsqijh nwcrus nfwh nj ng ms
-mw mwd mlceo mjxdqfrnlg wxflpdn whc wjuln podciy pq py phfer prfmjicud pdoymnwxei fclgj
-fm fwdmslqn fpwcnguieh fdw fgixsr yco ycqlinro ylduwpsnh yrx yiq hysucxdqm hdmwpe
-hgecdfj en emjocsild epgdc ermjdhsx lwnepmcg lgchqdin jxhwe rsogxd rseoyl rqw rfimdy rhfl
-do dcnql dmqpchuyf dwuch dgsloqe gcxr ghepqyd ghlyopuncw ghu grewyluhfs us uo ucf
-ujxqh udr icmqsdj iw ifl iygsex ihncrl ienqm irmcunfgx igxweo ignpeyf
-5) There are 22 distinct pretty numbers in the text`
+```['sqflo,', 'spqinedf', 'sfoqmd', 'syejrqd', 'shoce', 'srdueqhgiy', 'sionpux', 'xclpedqmi', 'xlmnfqry', 'xrpmyenq', 'xrdng', 'ocxfsjdng', 'oewgjfr', 'ojxfqhernm', 'cop', 'coj', 'cmfur', 'cwj', 'cpqmxj', 'chwjlg', 'cejfugn', 'qx', 'qplfjnwidg', 'qhmoixw', 'ql', 'qdrulxogji', 'qinhmjul', 'qinexwo', 'qihmu', 'ncsepfl', 'nmodwsqijh', 'nwcrus', 'nfwh', 'nj', 'ng', 'ms', 'mw', 'mwd', 'mlceo', 'mjxdqfrnlg', 'wxflpdn', 'whc', 'wjuln', 'podciy', 'pq', 'py', 'phfer', 'prfmjicud', 'pdoymnwxei', 'fclgj', 'fm', 'fwdmslqn', 'fpwcnguieh', 'fdw', 'fgixsr', 'yco', 'ycqlinro', 'ylduwpsnh', 'yrx', 'yiq', 'hysucxdqm', 'hdmwpe', 'hgecdfj', 'en', 'emjocsild', 'epgdc', 'ermjdhsx', 'lwnepmcg', 'lgchqdin', 'jxhwe', 'rsogxd', 'rseoyl', 'rqw', 'rfimdy', 'rhfl', 'do', 'dcnql', 'dmqpchuyf', 'dwuch', 'dgsloqe', 'gcxr', 'ghepqyd', 'ghlyopuncw', 'ghu', 'grewyluhfs', 'us', 'uo', 'ucf', 'ujxqh', 'udr', 'icmqsdj', 'iw', 'ifl', 'iygsex', 'ihncrl', 'ienqm', 'irmcunfgx', 'igxweo', 'ignpeyf']
+```
+
+5) There are 22 distinct pretty numbers in the text
 
 **Case B**
 *Input*
@@ -98,10 +94,10 @@ hmypjfu xuedl nqpge cnyosu dniefl lf xcdupho wixmhcuynj poy ous jwroheqm xchm
 jnufdshiqe liyrexhmu cjlxoiquef fwqrijemcd csxpy eqxghfry fhnwomgyuq yj euhxmosc`
 
 Expected Output
-1) There are 3 prepositions in the text
-2) There are 46 verbs in the text
-3) There are 26 subjunctive verbs in the text
-4) Vocabulary list:
+- There are 3 prepositions in the text
+- There are 46 verbs in the text
+- There are 26 subjunctive verbs in the text
+- Vocabulary list:
 
 `sqemywlg snp swfruc sdhfnoxg sgljco silruxh xocpjedsfm xchm xcdupho xy xyp xhrjyocde
 xrhm xuedl oxmegsdi oegli ous oihjwrup csxpy cnfimrgows cnyosu cwoen ceqrugs cjlxoiquef
@@ -114,4 +110,4 @@ dniefl djpsogiy drg dufqwh gquscxhw gm gywlc gimqxwuyr uxfrpsnqd ucrfdsoeq uqpwm
 umynehjsci umyldn uwflpqc url ugnmqfypsd ifwpnx iecusqjp ijucmxw
 `
 
-5There are 21 distinct pretty numbers in the text
+5. There are 21 distinct pretty numbers in the text
