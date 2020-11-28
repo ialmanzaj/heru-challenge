@@ -1,13 +1,13 @@
 # heru-challenge
 
-# The Herucode Language
+## The Herucode Language
 
 Archeologists found a scroll containing texts in the ancient and mysterious Herucode
 language, remnants of a now-forgotten civilization: the Heruits.
 After many years of study, linguists have learned some of the fundamental characteristics of
 this language:
 
-# Lexicographical Order
+## Lexicographical Order
 In Herucode, like in our system, words are always ordered lexicographically, but the
 challenge is that the order of the letters in the Herucode alphabet is different from ours. Their
 alphabet, in order, is: sxocqnmwpfyheljrdgui.
@@ -22,7 +22,7 @@ Another interesting fact discovered by linguists is that, in the Herucode langua
 words of 6 letters or more that end in a bar letter. Furthermore, if a verb starts in a bar letter,
 then the verb is inflected in its subjunctive form.
 
-Numbers
+## Numbers
 Not that words aren't fun, but one could ask: how do Heruits represent the numbers? Well, in
 Herucode, words also represent numbers given in base 20, where each letter is a digit. The
 digits are ordered from the least significant to the most significant, which is the opposite of
@@ -36,25 +36,27 @@ Heruits consider a number to be pretty if it satisfies all of the following prop
 - it is greater than or equal to 81827
 - it is divisible by 3
 
-# The Challenge
-Write an API server with a single endpoint: POST /parse .
+## The Challenge
+Write an API server with a single endpoint: POST /parse
+
 This endpoint should receive as body the string parameter text containing a string of
 Herucode. 
 
 The endpoint should the return a JSON response with the following content:
-● prepositions: Integer with the number of prepositions in the text.
-● verbs: Integer with the number of verbs in the text.
-● subjunctive_verbs: Integer with the number of subjunctive verbs.
-● pretty_numbers: Integer with the number of distinct pretty numbers.
-● vocabulary_list: List of strings containing all the distinct words in the textordered by Herucode’s alphabetical order.
+- prepositions: Integer with the number of prepositions in the text.
+- verbs: Integer with the number of verbs in the text.
+- subjunctive_verbs: Integer with the number of subjunctive verbs.
+- pretty_numbers: Integer with the number of distinct pretty numbers.
+- vocabulary_list: List of strings containing all the distinct words in the textordered by Herucode’s alphabetical order.
 
 Remember to include detailed instructions on how to run your service. Feel free to add any
 other features you may find interesting/useful. Use the test cases included to validate your
 algorithm.
 
 Test Cases
-Case A
-Input
+
+**Case A**
+*Input*
 
 `shoce pq podciy nfwh phfer epgdc dgsloqe do rhfl qhmoixw cmfur qdrulxogji whc ermjdhsx
 py en yco ienqm wjuln dwuch qinhmjul mjxdqfrnlg iygsex qihmu grewyluhfs ucf us xclpedqmi
@@ -82,8 +84,8 @@ do dcnql dmqpchuyf dwuch dgsloqe gcxr ghepqyd ghlyopuncw ghu grewyluhfs us uo uc
 ujxqh udr icmqsdj iw ifl iygsex ihncrl ienqm irmcunfgx igxweo ignpeyf
 5) There are 22 distinct pretty numbers in the text`
 
-Case B
-Input
+**Case B**
+*Input*
 
 `dufqwh ndis eqclrnguo ceqrugs meod eofxlrd uqpwmni xrhm qgro hlwgimn fjnomcledi silruxh
 efwh uxfrpsnqd fyejhi fxdn swfruc eopq hcgeox lhimoynsr rwjxecpmfl gimqxwuyr eujh rfs
@@ -111,4 +113,5 @@ liyrexhmu jqwpdo jnufdshiqe jwroheqm jwispgefdo rxoew rcyihwxq rnc rwjxecpmfl rf
 dniefl djpsogiy drg dufqwh gquscxhw gm gywlc gimqxwuyr uxfrpsnqd ucrfdsoeq uqpwmni
 umynehjsci umyldn uwflpqc url ugnmqfypsd ifwpnx iecusqjp ijucmxw
 `
-5) There are 21 distinct pretty numbers in the text
+
+5There are 21 distinct pretty numbers in the text
