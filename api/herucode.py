@@ -4,8 +4,8 @@ class HeruCode:
     FOO_LETTERS = "udxsmpf"
     ALPHABETH = {c: i for i, c in enumerate(ALPHA)}
 
-    def __init__(self, text=None):
-        self.words = text.split(" ") if text else None
+    def __init__(self, text=""):
+        self.words = text.split(" ")
 
     def get_total_prepositions(self):
         return sum(1 for w in self.words if self.is_preposition(w))
