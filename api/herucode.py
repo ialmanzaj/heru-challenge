@@ -1,10 +1,14 @@
+from typing import List
+
 
 class HeruCode:
     ALPHA = "sxocqnmwpfyheljrdgui"
     FOO_LETTERS = "udxsmpf"
-    ALPHABETH = {c: i for i, c in enumerate(ALPHA)}
+    ALPHABET = {c: i for i, c in enumerate(ALPHA)}
 
     def __init__(self, text=""):
+        # validate text
+        #print(re.match(r'^[A-Z0-9 _]*[A-Z0-9][A-Z0-9 _]*$', text))
         self.words = text.split(" ")
 
     def get_total_prepositions(self) -> int:
@@ -14,7 +18,7 @@ class HeruCode:
         return sum(1 for w in self.words if self.is_a_verb(w))
 
     def sort_topo(self, word: str) -> List[str]:
-        return [self.ALPHABETH[c] for c in word]
+        return [self.ALPHABET[c] for c in word]
 
     def sort_word_topo(self, word: str) -> str:
         # sort topologically
@@ -45,4 +49,4 @@ class HeruCode:
         # base conversion
         # alphabeth 0-19
         # the Herucode word gxjrc represents the number 605637 ->(17 + 20 + 5600 + 120000 + 480000)
-        return sum(20 ** i * self.ALPHABETH[letter] for i, letter in enumerate(word))
+        return sum(20 ** i * self.ALPHABET[letter] for i, letter in enumerate(word))
