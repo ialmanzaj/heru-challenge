@@ -36,17 +36,13 @@ class HeruCode:
     def is_subjunctive_verb(self, word: str) -> bool:
         return self.is_a_verb(word) and word[0] not in self.FOO_LETTERS
 
-    def get_pretty_number(self, word: str) -> int:
-        return 0
+    def get_pretty_number(self) -> int:
+        words_to_numbers = [
+            self.convert_word_to_number(word) for word in self.words]
+        return sum(1 for number in words_to_numbers if number >= 81827 and number % 3 == 0)
 
     def convert_word_to_number(self, word: str) -> int:
         # base conversion
         # alphabeth 0-19
-        # sxocqnmwpfyheljrdgui
         # the Herucode word gxjrc represents the number 605637 ->(17 + 20 + 5600 + 120000 + 480000)
-        ans = 0
-        for i, c in enumerate(word):
-            ans += 20 ** i * self.ALPHABETH[c]
-            # print(i, c, base, ans, self.ALPHABETH[c])
-            # ans += self.ALPHABETH[c]
-        return ans
+        return sum(20 ** i * self.ALPHABETH[letter] for i, letter in enumerate(word))
