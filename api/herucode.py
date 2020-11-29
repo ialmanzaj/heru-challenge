@@ -13,14 +13,14 @@ class HeruCode:
     def get_total_verbs(self) -> int:
         return sum(1 for w in self.words if self.is_a_verb(w))
 
-    def sort_topo(self, word):
+    def sort_topo(self, word: str) -> List[str]:
         return [self.ALPHABETH[c] for c in word]
 
     def sort_word_topo(self, word: str) -> str:
         # sort topologically
         return "".join(sorted(word, key=self.sort_topo))
 
-    def get_vocabulary_list(self):
+    def get_vocabulary_list(self) -> List[str]:
         # sort list of words
         return sorted(set(self.words), key=self.sort_topo)
 
@@ -37,9 +37,9 @@ class HeruCode:
         return self.is_a_verb(word) and word[0] not in self.FOO_LETTERS
 
     def get_pretty_number(self) -> int:
-        words_to_numbers = [
-            self.convert_word_to_number(word) for word in self.words]
-        return sum(1 for number in words_to_numbers if number >= 81827 and number % 3 == 0)
+        words_as_numbers = [self.convert_word_to_number(
+            word) for word in self.words]
+        return sum(1 for number in words_as_numbers if number >= 81827 and number % 3 == 0)
 
     def convert_word_to_number(self, word: str) -> int:
         # base conversion
