@@ -10,10 +10,23 @@ class HeruCodeTest(unittest.TestCase):
         self.assertEqual(heru.get_total_prepositions(), 3)
         self.assertEqual(heru.get_total_verbs(), 36)
         self.assertEqual(heru.get_total_subjunctive_verbs(), 25)
-        #self.assertIs(heru.get_vocabulary_list(),['sqflo,', 'spqinedf', 'sfoqmd', 'syejrqd', 'shoce', 'srdueqhgiy', 'sionpux', 'xclpedqmi', 'xlmnfqry', 'xrpmyenq', 'xrdng', 'ocxfsjdng', 'oewgjfr', 'ojxfqhernm', 'cop', 'coj', 'cmfur', 'cwj', 'cpqmxj', 'chwjlg', 'cejfugn', 'qx', 'qplfjnwidg', 'qhmoixw', 'ql', 'qdrulxogji', 'qinhmjul', 'qinexwo', 'qihmu', 'ncsepfl', 'nmodwsqijh', 'nwcrus', 'nfwh', 'nj', 'ng', 'ms', 'mw', 'mwd', 'mlceo', 'mjxdqfrnlg', 'wxflpdn', 'whc', 'wjuln', 'podciy', 'pq', 'py', 'phfer','prfmjicud', 'pdoymnwxei', 'fclgj', 'fm', 'fwdmslqn', 'fpwcnguieh', 'fdw', 'fgixsr', 'yco', 'ycqlinro', 'ylduwpsnh', 'yrx', 'yiq', 'hysucxdqm', 'hdmwpe', 'hgecdfj', 'en', 'emjocsild', 'epgdc', 'ermjdhsx', 'lwnepmcg', 'lgchqdin', 'jxhwe', 'rsogxd', 'rseoyl', 'rqw', 'rfimdy', 'rhfl', 'do', 'dcnql', 'dmqpchuyf', 'dwuch', 'dgsloqe', 'gcxr', 'ghepqyd', 'ghlyopuncw', 'ghu', 'grewyluhfs', 'us', 'uo', 'ucf', 'ujxqh', 'udr', 'icmqsdj', 'iw', 'ifl', 'iygsex', 'ihncrl', 'ienqm', 'irmcunfgx', 'igxweo', 'ignpeyf'])
+        self.assertEqual(heru.get_vocabulary_list(), ['sqflo', 'spqinedf', 'sfoqmd', 'syejrqd', 'shoce', 'srdueqhgiy', 'sionpux', 'xclpedqmi', 'xlmnfqry', 'xrpmyenq', 'xrdng', 'ocxfsjdng', 'oewgjfr', 'ojxfqhernm', 'cop', 'coj', 'cmfur', 'cwj', 'cpqmxj', 'chwjlg', 'cejfugn', 'qx', 'qplfjnwidg', 'qhmoixw', 'ql', 'qdrulxogji', 'qinhmjul', 'qinexwo', 'qihmu', 'ncsepfl', 'nmodwsqijh', 'nwcrus', 'nfwh', 'nj', 'ng', 'ms', 'mw', 'mwd', 'mlceo', 'mjxdqfrnlg', 'wxflpdn', 'whc', 'wjuln', 'podciy', 'pq', 'py', 'phfer',
+                                                      'prfmjicud', 'pdoymnwxei', 'fclgj', 'fm', 'fwdmslqn', 'fpwcnguieh', 'fdw', 'fgixsr', 'yco', 'ycqlinro', 'ylduwpsnh', 'yrx', 'yiq', 'hysucxdqm', 'hdmwpe', 'hgecdfj', 'en', 'emjocsild', 'epgdc', 'ermjdhsx', 'lwnepmcg', 'lgchqdin', 'jxhwe', 'rsogxd', 'rseoyl', 'rqw', 'rfimdy', 'rhfl', 'do', 'dcnql', 'dmqpchuyf', 'dwuch', 'dgsloqe', 'gcxr', 'ghepqyd', 'ghlyopuncw', 'ghu', 'grewyluhfs', 'us', 'uo', 'ucf', 'ujxqh', 'udr', 'icmqsdj', 'iw', 'ifl', 'iygsex', 'ihncrl', 'ienqm', 'irmcunfgx', 'igxweo', 'ignpeyf'])
 
     def test_number_conversion(self):
-        self.assertIs(HeruCode().convert_word_to_number("gxjrc"), 605637)
+        self.assertEqual(HeruCode().convert_word_to_number("gxjrc"), 605637)
+
+    def test_number_conversion(self):
+        self.assertEqual(HeruCode().sort_word_topo("gxjrc"), 'xcjrg')
+
+    def test_second(self):
+        heru = HeruCode("dufqwh ndis eqclrnguo ceqrugs meod eofxlrd uqpwmni xrhm qgro hlwgimn fjnomcledi silruxh efwh uxfrpsnqd fyejhi fxdn swfruc eopq hcgeox lhimoynsr rwjxecpmfl gimqxwuyr eujh rfs qncuyiel hwuiqlne umyldn uwflpqc gywlc oxmegsdi sqemywlg cnfimrgows hnxyfd exmdnos djpsogiy xyp myngercj yeujqcoih sgljco xy lruneodc frqog hqsgcy wmi hyfgqj iecusqjp ugnmqfypsd yp rxoew lqeshijndg umynehjsci rnc xhrjyocde mnefpj rcyihwxq oihjwrup gquscxhw ucrfdsoeq drg nqhodjsm snp cwoen ehyldsnmf pmrs cghuwpfxly ifwpnx wqdgrl xocpjedsfm oegli url rylnsph ijucmxw jwispgefdo heixgmcy gm sdhfnoxg hc jqwpdo eo hmypjfu xuedl nqpge cnyosu dniefl lf xcdupho wixmhcuynj poy ous jwroheqm xchm jnufdshiqe liyrexhmu cjlxoiquef fwqrijemcd csxpy eqxghfry fhnwomgyuq yj euhxmosc")
+
+        self.assertEqual(heru.get_total_prepositions(), 3)
+        self.assertEqual(heru.get_total_verbs(), 46)
+        self.assertEqual(heru.get_total_subjunctive_verbs(), 26)
+        self.assertEqual(heru.get_vocabulary_list(),  ['sqemywlg', 'snp', 'swfruc', 'sdhfnoxg', 'sgljco', 'silruxh', 'xocpjedsfm', 'xchm', 'xcdupho', 'xy', 'xyp', 'xhrjyocde', 'xrhm', 'xuedl', 'oxmegsdi', 'oegli', 'ous', 'oihjwrup', 'csxpy', 'cnfimrgows', 'cnyosu', 'cwoen', 'ceqrugs', 'cjlxoiquef', 'cghuwpfxly', 'qncuyiel', 'qgro', 'nqpge', 'nqhodjsm', 'ndis', 'mnefpj', 'myngercj', 'meod', 'wqdgrl', 'wmi', 'wixmhcuynj', 'poy', 'pmrs', 'fxdn', 'fwqrijemcd', 'fyejhi', 'fhnwomgyuq', 'fjnomcledi', 'frqog', 'yp', 'yeujqcoih', 'yj', 'hc', 'hcgeox', 'hqsgcy',
+                                                       'hnxyfd', 'hmypjfu', 'hwuiqlne', 'hyfgqj', 'heixgmcy', 'hlwgimn', 'exmdnos', 'eo', 'eopq', 'eofxlrd', 'eqxghfry', 'eqclrnguo', 'efwh', 'ehyldsnmf', 'euhxmosc', 'eujh', 'lqeshijndg', 'lf', 'lhimoynsr', 'lruneodc', 'liyrexhmu', 'jqwpdo', 'jnufdshiqe', 'jwroheqm', 'jwispgefdo', 'rxoew', 'rcyihwxq', 'rnc', 'rwjxecpmfl', 'rfs', 'rylnsph', 'dniefl', 'djpsogiy', 'drg', 'dufqwh', 'gquscxhw', 'gm', 'gywlc', 'gimqxwuyr', 'uxfrpsnqd', 'ucrfdsoeq', 'uqpwmni', 'umynehjsci', 'umyldn', 'uwflpqc', 'url', 'ugnmqfypsd', 'ifwpnx', 'iecusqjp', 'ijucmxw'])
 
 
 if __name__ == "__main__":

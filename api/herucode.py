@@ -7,17 +7,24 @@ class HeruCode:
     def __init__(self, text=""):
         self.words = text.split(" ")
 
-    def get_total_prepositions(self):
+    def get_total_prepositions(self) -> int:
         return sum(1 for w in self.words if self.is_preposition(w))
 
-    def get_total_verbs(self):
+    def get_total_verbs(self) -> int:
         return sum(1 for w in self.words if self.is_a_verb(w))
 
-    def get_vocabulary_list(self):
-        # sort topologically
-        return sorted(set(self.words), key=lambda word: [self.ALPHABETH[c] for c in word])
+    def sort_topo(self, word):
+        return [self.ALPHABETH[c] for c in word]
 
-    def get_total_subjunctive_verbs(self):
+    def sort_word_topo(self, word: str) -> str:
+        # sort topologically
+        return "".join(sorted(word, key=self.sort_topo))
+
+    def get_vocabulary_list(self):
+        # sort list of words
+        return sorted(set(self.words), key=self.sort_topo)
+
+    def get_total_subjunctive_verbs(self) -> int:
         return sum(1 for w in self.words if self.is_subjunctive_verb(w))
 
     def is_a_verb(self, word: str) -> bool:
@@ -41,6 +48,6 @@ class HeruCode:
         for i, c in enumerate(word):
             base = 20
             ans *= base
-            #print(i, c, base, ans, self.ALPHABETH[c])
+            # print(i, c, base, ans, self.ALPHABETH[c])
             ans += self.ALPHABETH[c]
         return ans
