@@ -43,11 +43,10 @@ class HeruCode:
         # base conversion
         # alphabeth 0-19
         # sxocqnmwpfyheljrdgui
-        # the Herucode word gxjrc represents the number 605637 ->(17 + 1 + 14 + 15 + 4)
+        # the Herucode word gxjrc represents the number 605637 ->(17 + 20 + 5600 + 120000 + 480000)
         ans = 0
         for i, c in enumerate(word):
-            base = 20
-            ans *= base
+            ans += 20 ** i * self.ALPHABETH[c]
             # print(i, c, base, ans, self.ALPHABETH[c])
-            ans += self.ALPHABETH[c]
+            # ans += self.ALPHABETH[c]
         return ans
