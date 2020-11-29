@@ -1,4 +1,5 @@
 from typing import List
+import re
 
 
 class HeruCode:
@@ -7,15 +8,13 @@ class HeruCode:
     ALPHABET = {c: i for i, c in enumerate(ALPHA)}
 
     def __init__(self, text=""):
-        # validate text
-        #print(re.match(r'^[A-Z0-9 _]*[A-Z0-9][A-Z0-9 _]*$', text))
-        self.words = text.split(" ")
+        self._words = text.split(" ")
 
     def get_total_prepositions(self) -> int:
-        return sum(1 for w in self.words if self.is_preposition(w))
+        return sum(1 for w in self._words if self.is_preposition(w))
 
     def get_total_verbs(self) -> int:
-        return sum(1 for w in self.words if self.is_a_verb(w))
+        return sum(1 for w in self._words if self.is_a_verb(w))
 
     def sort_topo(self, word: str) -> List[str]:
         return [self.ALPHABET[c] for c in word]
@@ -26,10 +25,10 @@ class HeruCode:
 
     def get_vocabulary_list(self) -> List[str]:
         # sort list of words
-        return sorted(set(self.words), key=self.sort_topo)
+        return sorted(set(self._words), key=self.sort_topo)
 
     def get_total_subjunctive_verbs(self) -> int:
-        return sum(1 for w in self.words if self.is_subjunctive_verb(w))
+        return sum(1 for w in self._words if self.is_subjunctive_verb(w))
 
     def is_a_verb(self, word: str) -> bool:
         return len(word) >= 6 and word[len(word) - 1] not in self.FOO_LETTERS
@@ -42,7 +41,7 @@ class HeruCode:
 
     def get_pretty_number(self) -> int:
         words_as_numbers = [self.convert_word_to_number(
-            word) for word in self.words]
+            word) for word in self._words]
         return sum(1 for number in words_as_numbers if number >= 81827 and number % 3 == 0)
 
     def convert_word_to_number(self, word: str) -> int:
