@@ -1,5 +1,13 @@
 # heru-challenge
 
+How to run?
+```
+brew install python3
+make init
+make test
+make serve
+```
+
 ## The Herucode Language
 
 Archeologists found a scroll containing texts in the ancient and mysterious Herucode
