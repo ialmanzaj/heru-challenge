@@ -1,7 +1,7 @@
 from flask import Flask, abort, jsonify
 from flask_restful import Resource, Api, reqparse
 
-from herucode import HeruCodeFactory
+from .herucode import HeruCodeFactory
 
 app = Flask(__name__)
 api = Api(app)
