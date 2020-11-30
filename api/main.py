@@ -1,11 +1,12 @@
-from herucode import HeruCodeFactory
 from flask import Flask, abort, jsonify
 from flask_restful import Resource, Api, reqparse
-parser = reqparse.RequestParser()
 
+from herucode import HeruCodeFactory
 
 app = Flask(__name__)
 api = Api(app)
+
+parser = reqparse.RequestParser()
 
 
 class HeruCodeAPI(Resource):

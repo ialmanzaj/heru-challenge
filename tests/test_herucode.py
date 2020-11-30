@@ -1,6 +1,6 @@
 import unittest
 
-from herucode import HeruCodeFactory
+from api.herucode import HeruCodeFactory
 
 
 class HeruCodeTest(unittest.TestCase):
