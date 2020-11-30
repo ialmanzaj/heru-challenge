@@ -2,7 +2,16 @@ from typing import List
 import re
 
 
-class HeruCode:
+class HeruCodeFactory:
+    def create(text):
+        if re.match(r'^[sxocqnmwpfyheljrdgui]+\s', text):
+            return HeruCode(text)
+        else:
+            raise ValueError("words are invalid")
+    create = staticmethod(create)
+
+
+class HeruCode(HeruCodeFactory):
     ALPHA = "sxocqnmwpfyheljrdgui"
     FOO_LETTERS = "udxsmpf"
     ALPHABET = {c: i for i, c in enumerate(ALPHA)}

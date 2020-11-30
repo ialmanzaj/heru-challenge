@@ -1,4 +1,4 @@
-from herucode import HeruCode
+from herucode import HeruCodeFactory
 from flask import Flask, abort, jsonify
 from flask_restful import Resource, Api, reqparse
 parser = reqparse.RequestParser()
@@ -14,8 +14,13 @@ class HeruCodeAPI(Resource):
         args = parser.parse_args()
         text = args['text']
 
-        # add string validation
-        heru = HeruCode(text)
+        if not text:
+            abort(400, "text is empty")
+
+        try:
+            heru = HeruCodeFactory.create(text)
+        except ValueError:
+            abort(400, "words are invalid")
 
         return {
             'prepositions': heru.get_total_prepositions(),
