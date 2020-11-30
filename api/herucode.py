@@ -4,7 +4,8 @@ import re
 
 class HeruCodeFactory:
     def create(text):
-        if re.match(r'^[sxocqnmwpfyheljrdgui]+\s', text):
+        valid = re.match(r'^[sxocqnmwpfyheljrdgui]+\s', text)
+        if valid:
             return HeruCode(text)
         else:
             raise ValueError("words are invalid")

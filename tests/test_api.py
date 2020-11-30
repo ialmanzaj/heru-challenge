@@ -18,7 +18,7 @@ class APITestCase(unittest.TestCase):
             "message": "text is empty"
         })
 
-    def test_wrong_text(self):
+    def test_all_text_is_invalid(self):
         response = self.client.post(
             '/parse', data=dict(
                 text="lmplñ njaqe ufhadg zq jdjaaqqskfaoqw"

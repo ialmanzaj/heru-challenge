@@ -5,11 +5,16 @@ from api.herucode import HeruCodeFactory
 
 class HeruCodeTest(unittest.TestCase):
 
-    def test_object_validation_one(self):
+    def test_all_words_invalid(self):
         with self.assertRaises(ValueError):
             HeruCodeFactory.create("lmplñ njaqe ufhadg zq jdjaaqqskfaoqw")
 
-    def test_string_validation_two(self):
+    def test_weird_characters(self):
+        with self.assertRaises(ValueError):
+            HeruCodeFactory.create(
+                "cmfur.´?=qdrulxogji ¿whc ermjdhsx= lmplñ njaqe {ufhadg zq jdjaaqqskfaoqw")
+
+    def test_all_words_valid(self):
         heru = HeruCodeFactory.create("shoce pq podciy nfwh phfer epgdc dgsloqe do rhfl qhmoixw cmfur qdrulxogji whc ermjdhsx py en yco ienqm wjuln dwuch qinhmjul mjxdqfrnlg iygsex qihmu grewyluhfs ucf us xclpedqmi yrx qinexwo qx rqw wxflpdn rsogxd cpqmxj lgchqdin fdw nwcrus coj nj qplfjnwidg fwdmslqn cwj hysucxdqm ms hdmwpe igxweo sqflo ycqlinro ghu hgecdfj mw xrpmyenq fgixsr fpwcnguieh fclgj ghepqyd jxhwe cejfugn ujxqh ihncrl mlceo udr fm ocxfsjdng sfoqmd pdoymnwxei spqinedf ql ncsepfl icmqsdj chwjlg yiq ifl syejrqd lwnepmcg xlmnfqry ghlyopuncw qx iw sionpux cop dmqpchuyf ojxfqhernm ignpeyf rseoyl emjocsild rfimdy mwd oewgjfr uo irmcunfgx ylduwpsnh xrdng gcxr ng prfmjicud srdueqhgiy nmodwsqijh dcnql")
         self.assertIs(heru.get_total_prepositions(), 3)
 
